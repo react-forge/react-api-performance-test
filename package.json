@@ -1,0 +1,32 @@
+{
+  "name": "test-weaver",
+  "version": "1.0.0",
+  "description": "Multi-stack user management system with Node.js API and React applications",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix nodejs-application && npm install --prefix react-19-application && npm install --prefix react-18-application",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:react19\" \"npm run dev:react18\"",
+    "dev:api": "npm start --prefix nodejs-application",
+    "dev:react19": "npm run dev --prefix react-19-application",
+    "dev:react18": "npm run dev --prefix react-18-application",
+    "start:api": "npm start --prefix nodejs-application",
+    "build:all": "npm run build --prefix react-19-application && npm run build --prefix react-18-application",
+    "clean": "rm -rf nodejs-application/node_modules react-19-application/node_modules react-18-application/node_modules",
+    "postinstall": "npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "react",
+    "react-19",
+    "react-18",
+    "api",
+    "user-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.0+sha512.418e45c2268c4d6b69a28f3939084b5853d5f392c43c0b5588bd1995a96e328414ae4b7777a8980c64bad4328c52586ff879b289f98ae65372a55fa4d0ff70dd"
+}

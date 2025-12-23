@@ -1,0 +1,25 @@
+{
+  "name": "react-19-user-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run generate-api && vite",
+    "build": "vite build && node generate-table.js",
+    "preview": "vite preview",
+    "generate-api": "react-api-weaver generate --input ./@api-clients/user-api.yaml --output ./src/api/user-api/"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "axios": "^1.6.2",
+    "react-api-weaver": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "rollup-plugin-visualizer": "^6.0.5",
+    "vite": "^5.0.8"
+  }
+}
